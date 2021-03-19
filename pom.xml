@@ -11,6 +11,11 @@
     <modules>
         <module>pjmaven2</module>
         <module>pjmaven3</module>
+        <module>pjmaven4</module>
+        <module>pjmaven5</module>
+        <module>pjmaven6</module>
+        <module>pjmaven7</module>
+        <module>pjmaven8</module>
     </modules>
 
 

@@ -69,9 +69,22 @@ public class HttpRequest {
             while ((c2=in.read())!=-1){
                 if (c1==13&&c2==10){
                     break;}
+                builder.append((char)c2);
+                c1=c2;
             }
             String line =builder.toString().trim();
             System.out.println("请求行："+line);
+            String[]data=line.split("\\s");
+            /**
+             * 这里后期可以循环接收客户端请求时会偶尔出现下标越界的情况，
+             * 实际是因为空请求问题，后期解决
+             */
+            method=data[0];
+            url=data[1];
+            protocol=data[2];
+            System.out.println("method:"+method);
+            System.out.println("url:"+url);//这里可能会下标越界
+            System.out.println("protocol:"+protocol);
         } catch (IOException e) {
             e.printStackTrace();
         }

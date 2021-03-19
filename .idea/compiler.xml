@@ -6,7 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="pjmaven7" />
+        <module name="pjmaven8" />
+        <module name="pjmaven5" />
+        <module name="pjmaven6" />
         <module name="pjmaven3" />
+        <module name="pjmaven4" />
         <module name="pjmaven2" />
       </profile>
     </annotationProcessing>
