@@ -38,13 +38,15 @@ public class ClientHandler  implements Runnable{
                 //将要响应的资源设置到response中
                 response.setEntity(file);
                 //响应客户端
-                response.flush();
                 //所有相应内容发送完毕
             }else {
                 System.out.println("该资源不存在");
+                //响应404页面
+                response.setEntity(new File("./pjmaven8/webapps/root/404.html"));
             }
 
             //3发送相应
+            response.flush();
 
         } catch (Exception e) {
             e.printStackTrace();
